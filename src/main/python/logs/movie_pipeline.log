@@ -1,0 +1,244 @@
+"06-Dec-23 23:47:40" - root - INFO - movie_pipeline is Started ...
+"06-Dec-23 23:47:40" - root - INFO - main() is started ...
+"06-Dec-23 23:47:40" - create_objects - INFO - get_spark_object() is started. The 'TEST' envn is used.
+"06-Dec-23 23:47:46" - create_objects - INFO - Spark Object is created ...
+"06-Dec-23 23:47:50" - validations - INFO - Validate the Spark object by printing Current Date - [Row(current_date()=datetime.date(2023, 12, 6))]
+"06-Dec-23 23:47:50" - validations - INFO - Spark object is validated. Spark object is ready.
+"06-Dec-23 23:47:50" - movie_run_data_ingest - INFO - The load_files() Function is started ...
+"06-Dec-23 23:47:51" - movie_run_data_ingest - INFO - The input file C:\Users\aamna\PycharmProjects\MovieAnalytics\src\main\python\bin\..\staging\movie\movie.csv is loaded to the data frame. The load_files() Function is completed.
+"06-Dec-23 23:47:51" - validations - INFO - The Dataframe validation by count df_count() is started for Dataframe df_movies...
+"06-Dec-23 23:47:52" - validations - INFO - The dataframe count is 27278.
+"06-Dec-23 23:47:52" - validations - INFO - The DataFrame Validation by count df_count() is completed.
+"06-Dec-23 23:47:52" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_movies...
+"06-Dec-23 23:47:52" - validations - INFO - The DataFrame top 10 records are:.
+"06-Dec-23 23:47:52" - validations - INFO - 
+ 	 movieId                              title                                      genres
+       1                   Toy Story (1995) Adventure|Animation|Children|Comedy|Fantasy
+       2                     Jumanji (1995)                  Adventure|Children|Fantasy
+       3            Grumpier Old Men (1995)                              Comedy|Romance
+       4           Waiting to Exhale (1995)                        Comedy|Drama|Romance
+       5 Father of the Bride Part II (1995)                                      Comedy
+       6                        Heat (1995)                       Action|Crime|Thriller
+       7                     Sabrina (1995)                              Comedy|Romance
+       8                Tom and Huck (1995)                          Adventure|Children
+       9                Sudden Death (1995)                                      Action
+      10                   GoldenEye (1995)                   Action|Adventure|Thriller
+"06-Dec-23 23:47:52" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"06-Dec-23 23:47:52" - movie_run_data_ingest - INFO - The load_files() Function is started ...
+"06-Dec-23 23:48:14" - movie_run_data_ingest - INFO - The input file C:\Users\aamna\PycharmProjects\MovieAnalytics\src\main\python\bin\..\staging\ratings\rating.csv is loaded to the data frame. The load_files() Function is completed.
+"06-Dec-23 23:48:14" - movie_run_data_preprocessing - INFO - perform_data_clean() is started ...
+"06-Dec-23 23:48:36" - movie_run_data_preprocessing - INFO - perform_data_clean() is completed...
+"06-Dec-23 23:48:36" - validations - INFO - The Dataframe validation by count df_count() is started for Dataframe df_r2...
+"06-Dec-23 23:48:42" - validations - INFO - The dataframe count is 20000263.
+"06-Dec-23 23:48:42" - validations - INFO - The DataFrame Validation by count df_count() is completed.
+"06-Dec-23 23:48:42" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_r2...
+"06-Dec-23 23:48:42" - validations - INFO - The DataFrame top 10 records are:.
+"06-Dec-23 23:48:42" - validations - INFO - 
+ 	 userId  movieId  rating
+      1        2     3.5
+      1       29     3.5
+      1       32     3.5
+      1       47     3.5
+      1       50     3.5
+      1      112     3.5
+      1      151     4.0
+      1      223     4.0
+      1      253     4.0
+      1      260     4.0
+"06-Dec-23 23:48:42" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"06-Dec-23 23:48:42" - validations - INFO - The DataFrame Schema Validation for Dataframe df_r2...
+"06-Dec-23 23:48:42" - validations - INFO - The DataFrame df_r2 schema is: 
+"06-Dec-23 23:48:42" - validations - INFO - 	StructField(userId,IntegerType,true)
+"06-Dec-23 23:48:42" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"06-Dec-23 23:48:42" - validations - INFO - 	StructField(rating,DoubleType,true)
+"06-Dec-23 23:48:42" - validations - INFO - The DataFrame Schema Validation is completed.
+"06-Dec-23 23:48:42" - movie_run_data_transform - INFO - Transform - movie_report() is started...
+"06-Dec-23 23:51:46" - movie_run_data_transform - INFO - Root-mean-square error = 0.821457842511739
+"06-Dec-23 23:51:46" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe single_user...
+"06-Dec-23 23:51:46" - validations - INFO - The DataFrame top 10 records are:.
+"06-Dec-23 23:51:51" - validations - INFO - 
+ 	 movieId  userId
+       3      12
+       7      12
+      17      12
+     104      12
+     344      12
+     376      12
+     494      12
+     608      12
+     736      12
+     780      12
+"06-Dec-23 23:51:51" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"06-Dec-23 23:51:51" - validations - INFO - The DataFrame Schema Validation for Dataframe single_user...
+"06-Dec-23 23:51:51" - validations - INFO - The DataFrame single_user schema is: 
+"06-Dec-23 23:51:51" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"06-Dec-23 23:51:51" - validations - INFO - 	StructField(userId,IntegerType,true)
+"06-Dec-23 23:51:51" - validations - INFO - The DataFrame Schema Validation is completed.
+"06-Dec-23 23:51:51" - movie_run_data_transform - INFO - Transform - movie_report() is completed...
+"06-Dec-23 23:51:51" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_movie_final...
+"06-Dec-23 23:51:51" - validations - INFO - The DataFrame top 10 records are:.
+"06-Dec-23 23:53:14" - validations - INFO - 
+ 	 movieId  userId  prediction
+     780      12    3.607620
+     608      12    3.478845
+     104      12    3.422168
+      17      12    3.422150
+     736      12    3.369684
+     494      12    3.348436
+       7      12    3.268232
+     376      12    3.260367
+       3      12    3.178837
+     344      12    2.882809
+"06-Dec-23 23:53:14" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"06-Dec-23 23:53:14" - validations - INFO - The DataFrame Schema Validation for Dataframe df_movie_final...
+"06-Dec-23 23:53:14" - validations - INFO - The DataFrame df_movie_final schema is: 
+"06-Dec-23 23:53:14" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"06-Dec-23 23:53:14" - validations - INFO - 	StructField(userId,IntegerType,true)
+"06-Dec-23 23:53:14" - validations - INFO - 	StructField(prediction,FloatType,false)
+"06-Dec-23 23:53:14" - validations - INFO - The DataFrame Schema Validation is completed.
+"06-Dec-23 23:53:14" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_movie_join...
+"06-Dec-23 23:53:14" - validations - INFO - The DataFrame top 10 records are:.
+"06-Dec-23 23:54:27" - validations - INFO - 
+ 	 userId  prediction  movieId                                title                            genres
+     12    3.607620      780 Independence Day (a.k.a. ID4) (1996)  Action|Adventure|Sci-Fi|Thriller
+     12    3.478845      608                         Fargo (1996)       Comedy|Crime|Drama|Thriller
+     12    3.422168      104                 Happy Gilmore (1996)                            Comedy
+     12    3.422150       17         Sense and Sensibility (1995)                     Drama|Romance
+     12    3.369684      736                       Twister (1996) Action|Adventure|Romance|Thriller
+     12    3.348436      494            Executive Decision (1996)         Action|Adventure|Thriller
+     12    3.268232        7                       Sabrina (1995)                    Comedy|Romance
+     12    3.260367      376               River Wild, The (1994)                   Action|Thriller
+     12    3.178837        3              Grumpier Old Men (1995)                    Comedy|Romance
+     12    2.882809      344    Ace Ventura: Pet Detective (1994)                            Comedy
+"06-Dec-23 23:54:27" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"06-Dec-23 23:54:27" - validations - INFO - The DataFrame Schema Validation for Dataframe df_movie_join...
+"06-Dec-23 23:54:27" - validations - INFO - The DataFrame df_movie_join schema is: 
+"06-Dec-23 23:54:27" - validations - INFO - 	StructField(userId,IntegerType,true)
+"06-Dec-23 23:54:27" - validations - INFO - 	StructField(prediction,FloatType,false)
+"06-Dec-23 23:54:27" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"06-Dec-23 23:54:27" - validations - INFO - 	StructField(title,StringType,true)
+"06-Dec-23 23:54:27" - validations - INFO - 	StructField(genres,StringType,true)
+"06-Dec-23 23:54:27" - validations - INFO - The DataFrame Schema Validation is completed.
+"06-Dec-23 23:54:27" - root - INFO - movie_pipeline is Completed.
+"08-Dec-23 16:18:35" - root - INFO - movie_pipeline is Started ...
+"08-Dec-23 16:18:35" - root - INFO - main() is started ...
+"08-Dec-23 16:18:35" - create_objects - INFO - get_spark_object() is started. The 'TEST' envn is used.
+"08-Dec-23 16:18:57" - create_objects - INFO - Spark Object is created ...
+"08-Dec-23 16:19:03" - validations - INFO - Validate the Spark object by printing Current Date - [Row(current_date()=datetime.date(2023, 12, 8))]
+"08-Dec-23 16:19:03" - validations - INFO - Spark object is validated. Spark object is ready.
+"08-Dec-23 16:19:03" - movie_run_data_ingest - INFO - The load_files() Function is started ...
+"08-Dec-23 16:19:05" - movie_run_data_ingest - INFO - The input file C:\Users\aamna\PycharmProjects\MovieAnalytics\src\main\python\bin\..\staging\movie\movie.csv is loaded to the data frame. The load_files() Function is completed.
+"08-Dec-23 16:19:05" - validations - INFO - The Dataframe validation by count df_count() is started for Dataframe df_movies...
+"08-Dec-23 16:19:06" - validations - INFO - The dataframe count is 27278.
+"08-Dec-23 16:19:06" - validations - INFO - The DataFrame Validation by count df_count() is completed.
+"08-Dec-23 16:19:06" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_movies...
+"08-Dec-23 16:19:06" - validations - INFO - The DataFrame top 10 records are:.
+"08-Dec-23 16:19:06" - validations - INFO - 
+ 	 movieId                              title                                      genres
+       1                   Toy Story (1995) Adventure|Animation|Children|Comedy|Fantasy
+       2                     Jumanji (1995)                  Adventure|Children|Fantasy
+       3            Grumpier Old Men (1995)                              Comedy|Romance
+       4           Waiting to Exhale (1995)                        Comedy|Drama|Romance
+       5 Father of the Bride Part II (1995)                                      Comedy
+       6                        Heat (1995)                       Action|Crime|Thriller
+       7                     Sabrina (1995)                              Comedy|Romance
+       8                Tom and Huck (1995)                          Adventure|Children
+       9                Sudden Death (1995)                                      Action
+      10                   GoldenEye (1995)                   Action|Adventure|Thriller
+"08-Dec-23 16:19:06" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"08-Dec-23 16:19:06" - movie_run_data_ingest - INFO - The load_files() Function is started ...
+"08-Dec-23 16:19:31" - movie_run_data_ingest - INFO - The input file C:\Users\aamna\PycharmProjects\MovieAnalytics\src\main\python\bin\..\staging\ratings\rating.csv is loaded to the data frame. The load_files() Function is completed.
+"08-Dec-23 16:19:31" - movie_run_data_preprocessing - INFO - perform_data_clean() is started ...
+"08-Dec-23 16:19:59" - movie_run_data_preprocessing - INFO - perform_data_clean() is completed...
+"08-Dec-23 16:19:59" - validations - INFO - The Dataframe validation by count df_count() is started for Dataframe df_r2...
+"08-Dec-23 16:20:07" - validations - INFO - The dataframe count is 20000263.
+"08-Dec-23 16:20:07" - validations - INFO - The DataFrame Validation by count df_count() is completed.
+"08-Dec-23 16:20:07" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_r2...
+"08-Dec-23 16:20:07" - validations - INFO - The DataFrame top 10 records are:.
+"08-Dec-23 16:20:07" - validations - INFO - 
+ 	 userId  movieId  rating
+      1        2     3.5
+      1       29     3.5
+      1       32     3.5
+      1       47     3.5
+      1       50     3.5
+      1      112     3.5
+      1      151     4.0
+      1      223     4.0
+      1      253     4.0
+      1      260     4.0
+"08-Dec-23 16:20:07" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"08-Dec-23 16:20:07" - validations - INFO - The DataFrame Schema Validation for Dataframe df_r2...
+"08-Dec-23 16:20:07" - validations - INFO - The DataFrame df_r2 schema is: 
+"08-Dec-23 16:20:07" - validations - INFO - 	StructField(userId,IntegerType,true)
+"08-Dec-23 16:20:07" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"08-Dec-23 16:20:07" - validations - INFO - 	StructField(rating,DoubleType,true)
+"08-Dec-23 16:20:07" - validations - INFO - The DataFrame Schema Validation is completed.
+"08-Dec-23 16:20:07" - movie_run_data_transform - INFO - Transform - movie_report() is started...
+"08-Dec-23 16:23:36" - movie_run_data_transform - INFO - Root-mean-square error = 0.8180128758603317
+"08-Dec-23 16:23:36" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe single_user...
+"08-Dec-23 16:23:36" - validations - INFO - The DataFrame top 10 records are:.
+"08-Dec-23 16:23:41" - validations - INFO - 
+ 	 movieId  userId
+     110       2
+     924       2
+    1210       2
+    1544       2
+    1748       2
+    1969       2
+    1970       2
+    1974       2
+    2455       2
+    2791       2
+"08-Dec-23 16:23:41" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"08-Dec-23 16:23:41" - validations - INFO - The DataFrame Schema Validation for Dataframe single_user...
+"08-Dec-23 16:23:41" - validations - INFO - The DataFrame single_user schema is: 
+"08-Dec-23 16:23:41" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"08-Dec-23 16:23:41" - validations - INFO - 	StructField(userId,IntegerType,true)
+"08-Dec-23 16:23:41" - validations - INFO - The DataFrame Schema Validation is completed.
+"08-Dec-23 16:23:41" - movie_run_data_transform - INFO - Transform - movie_report() is completed...
+"08-Dec-23 16:23:41" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_movie_final...
+"08-Dec-23 16:23:41" - validations - INFO - The DataFrame top 10 records are:.
+"08-Dec-23 16:25:06" - validations - INFO - 
+ 	 movieId  userId  prediction
+     110       2    5.147132
+    1210       2    4.949220
+    2858       2    4.845320
+    2791       2    4.639388
+     924       2    4.479291
+    1748       2    4.109540
+    2455       2    4.061786
+    3450       2    4.042296
+    3159       2    3.997270
+    1974       2    3.715244
+"08-Dec-23 16:25:06" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"08-Dec-23 16:25:06" - validations - INFO - The DataFrame Schema Validation for Dataframe df_movie_final...
+"08-Dec-23 16:25:06" - validations - INFO - The DataFrame df_movie_final schema is: 
+"08-Dec-23 16:25:06" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"08-Dec-23 16:25:06" - validations - INFO - 	StructField(userId,IntegerType,true)
+"08-Dec-23 16:25:06" - validations - INFO - 	StructField(prediction,FloatType,false)
+"08-Dec-23 16:25:06" - validations - INFO - The DataFrame Schema Validation is completed.
+"08-Dec-23 16:25:06" - validations - INFO - The Data Frame Validation by top 10 record df_top10_rec() is started for Dataframe df_movie_join...
+"08-Dec-23 16:25:06" - validations - INFO - The DataFrame top 10 records are:.
+"08-Dec-23 16:26:35" - validations - INFO - 
+ 	 userId  prediction  movieId                                             title                              genres
+      2    5.147132      110                                 Braveheart (1995)                    Action|Drama|War
+      2    4.949220     1210 Star Wars: Episode VI - Return of the Jedi (1983)             Action|Adventure|Sci-Fi
+      2    4.845320     2858                            American Beauty (1999)                        Comedy|Drama
+      2    4.639388     2791                                  Airplane! (1980)                              Comedy
+      2    4.479291      924                      2001: A Space Odyssey (1968)              Adventure|Drama|Sci-Fi
+      2    4.109540     1748                                  Dark City (1998) Adventure|Film-Noir|Sci-Fi|Thriller
+      2    4.061786     2455                                   Fly, The (1986)        Drama|Horror|Sci-Fi|Thriller
+      2    4.042296     3450                             Grumpy Old Men (1993)                              Comedy
+      2    3.997270     3159                              Fantasia 2000 (1999)     Animation|Children|Musical|IMAX
+      2    3.715244     1974                            Friday the 13th (1980)             Horror|Mystery|Thriller
+"08-Dec-23 16:26:35" - validations - INFO - The DataFrame Validation by top 10 record df_top10_rec() is completed.
+"08-Dec-23 16:26:35" - validations - INFO - The DataFrame Schema Validation for Dataframe df_movie_join...
+"08-Dec-23 16:26:35" - validations - INFO - The DataFrame df_movie_join schema is: 
+"08-Dec-23 16:26:35" - validations - INFO - 	StructField(userId,IntegerType,true)
+"08-Dec-23 16:26:35" - validations - INFO - 	StructField(prediction,FloatType,false)
+"08-Dec-23 16:26:35" - validations - INFO - 	StructField(movieId,IntegerType,true)
+"08-Dec-23 16:26:35" - validations - INFO - 	StructField(title,StringType,true)
+"08-Dec-23 16:26:35" - validations - INFO - 	StructField(genres,StringType,true)
+"08-Dec-23 16:26:35" - validations - INFO - The DataFrame Schema Validation is completed.
+"08-Dec-23 16:26:35" - root - INFO - movie_pipeline is Completed.
